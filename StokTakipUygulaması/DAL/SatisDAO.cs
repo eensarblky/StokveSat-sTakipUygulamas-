@@ -5,7 +5,7 @@ using System.Collections;
 
 namespace StokSatisTakip.DAL
 {
-    // IRepository arayüzünü uyguluyoruz
+     
     internal class SatisDAO : IRepository<Satis>
     {
         private string dbBaglanti = "Server=172.21.54.253;Database=26_132430012;User ID=26_132430012;Password=İnif123.;";
@@ -52,7 +52,7 @@ namespace StokSatisTakip.DAL
             return new ArrayList();
         }
 
-        // --- ÖZEL METOTLAR ---
+         
 
         
         public void detayKaydet(SatisDetay sd)

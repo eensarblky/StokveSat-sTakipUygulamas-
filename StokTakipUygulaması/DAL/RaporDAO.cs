@@ -23,10 +23,7 @@ namespace StokSatisTakip.DAL
         {
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
             {
-                // Düzeltilenler:
-                // sd.Fiyat YERİNE sd.birimFiyat (DAO dosyasında böyle yazmışsın)
-                // sd.Adet YERİNE sd.adet
-                // sd.UrunId YERİNE sd.ürünId
+                 
 
                 string sql = @"
             SELECT 
@@ -67,11 +64,7 @@ namespace StokSatisTakip.DAL
         { 
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
             {
-                // Düzeltilenler:
-                // Tablo: satisDetaylari (küçük harfle başlıyor ve sonunda 'ri' var)
-                // Sütun: ürünId (küçük 'ü' ile başlıyor)
-                // Sütun: adet (küçük harfle)
-
+                 
                 string sql = @"
             SELECT 
                 u.UrunAdi, 
@@ -95,10 +88,7 @@ namespace StokSatisTakip.DAL
         {
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
             {
-                // Düzeltmeler:
-                // 1. 'satislar' ve 'musteriler' tabloları birleştirildi (JOIN).
-                // 2. 'MusteriAdi' yerine tablodaki gerçek adı olan 'adSoyad' kullanıldı.
-                // 3. 'müsteriId' bağlantısı kuruldu.
+                 
 
                 string sql = @"
             SELECT 

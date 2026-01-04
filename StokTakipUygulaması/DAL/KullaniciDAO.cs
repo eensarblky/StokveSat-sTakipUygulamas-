@@ -6,14 +6,12 @@ using System.Data;
 
 namespace StokSatisTakip.DAL
 {
-    // 1. IRepository arayüzünü uyguladığımızı belirtiyoruz
+    
     internal class KullaniciDAO : IRepository<Kullanici>
     {
         private string dbBaglanti = "Server=172.21.54.253;Database=26_132430012;User ID=26_132430012;Password=İnif123.;";
 
-        // --- INTERFACE GEREKSİNİMLERİ (Zorunlu Metotlar) ---
-
-        // Kaydetme Metodu (Eskiden KullaniciEkle idi, artık 'kaydet' ve nesne alıyor)
+         
         public void kaydet(Kullanici k)
         {
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
@@ -24,7 +22,7 @@ namespace StokSatisTakip.DAL
 
                 MySqlCommand komut = new MySqlCommand(sql, baglanti);
 
-                // Nesne içindeki verileri parametrelere atıyoruz
+                 
                 komut.Parameters.AddWithValue("@kadi", k.KullaniciAdi);
                 komut.Parameters.AddWithValue("@sifre", k.Sifre);
                 komut.Parameters.AddWithValue("@rol", k.Rol);
@@ -33,7 +31,7 @@ namespace StokSatisTakip.DAL
             }
         }
 
-        // Silme Metodu
+         
         public void sil(int id)
         {
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
@@ -46,7 +44,7 @@ namespace StokSatisTakip.DAL
             }
         }
 
-        // Listeleme Metodu (ArrayList döndüren)
+         
         public ArrayList tumunuGetir()
         {
             ArrayList kullanicilar = new ArrayList();
@@ -69,9 +67,7 @@ namespace StokSatisTakip.DAL
             return kullanicilar;
         }
 
-        // --- DİĞER ÖZEL METOTLAR ---
-
-        // Giriş Yapma (Login) Metodu
+         
         public bool GirisYap(string kadi, string sifre)
         {
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
@@ -85,7 +81,7 @@ namespace StokSatisTakip.DAL
 
                 MySqlDataReader oku = komut.ExecuteReader();
 
-                if (oku.Read()) // Kayıt bulunduysa
+                if (oku.Read())  
                 {
                     Domain.Oturum.KullaniciId = Convert.ToInt32(oku["Id"]);
                     Domain.Oturum.AdSoyad = oku["KullaniciAdi"].ToString();
@@ -99,12 +95,12 @@ namespace StokSatisTakip.DAL
             }
         }
 
-        // DataGridView doldurmak için DataTable döndüren metot
+         
         public DataTable KullanicilariGetir()
         {
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
             {
-                // Şifreleri güvenlik gereği listede göstermeyelim
+                 
                 MySqlDataAdapter adtr = new MySqlDataAdapter("SELECT Id, KullaniciAdi, Rol FROM kullanicilar", baglanti);
                 DataTable tablo = new DataTable();
                 adtr.Fill(tablo);

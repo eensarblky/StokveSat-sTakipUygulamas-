@@ -7,21 +7,21 @@ namespace StokSatisTakip
 {
     public partial class AnaMenu : Form
     {
-        // --- SÜRÜKLEME İÇİN GEREKLİ DLL'LER ---
+         
         [DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
 
-        // Yapıcı Metot (Constructor)
+         
         public AnaMenu()
         {
             InitializeComponent();
-            ModernTasarimUygula(); // Tasarımı yükle
+            ModernTasarimUygula();  
         }
 
-        // --- SÜRÜKLEME OLAYI (ARTIK PANELE BAĞLI) ---
+         
         private void Header_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -31,26 +31,26 @@ namespace StokSatisTakip
             }
         }
 
-        // --- MODERN TASARIM VE PANEL AYARLARI ---
+         
         private void ModernTasarimUygula()
         {
-            // 1. Formun Çerçevesini Kaldır
+             
             this.FormBorderStyle = FormBorderStyle.None;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.BackColor = Color.FromArgb(244, 247, 252);
 
-            // 2. Üst Tarafa Sürükleme Paneli Ekle (Görünmez Şerit)
+             
             Panel pnlBaslik = new Panel();
-            pnlBaslik.Dock = DockStyle.Top; // En tepeye yapışsın
-            pnlBaslik.Height = 40;          // Yüksekliği 40 piksel
-            pnlBaslik.BackColor = Color.FromArgb(44, 62, 80); // Şeffaf olsun
+            pnlBaslik.Dock = DockStyle.Top;  
+            pnlBaslik.Height = 40;           
+            pnlBaslik.BackColor = Color.FromArgb(44, 62, 80);  
 
-            // Sürükleme olayını bu panele veriyoruz!
+             
             pnlBaslik.MouseDown += Header_MouseDown;
 
-            this.Controls.Add(pnlBaslik); // Paneli forma ekle
+            this.Controls.Add(pnlBaslik);  
 
-            // Mevcut btnKapat kodunu bununla değiştir:
+            
 
             Button btnKapat = new Button();
             btnKapat.Text = "X";
@@ -59,28 +59,28 @@ namespace StokSatisTakip
             btnKapat.FlatStyle = FlatStyle.Flat;
             btnKapat.FlatAppearance.BorderSize = 0;
 
-            // NORMAL DURUMDAKİ RENGİ (Burayı değiştirdik)
-            btnKapat.ForeColor = Color.Firebrick; // Daha şık bir kırmızı tonu
+             
+            btnKapat.ForeColor = Color.Firebrick;  
             btnKapat.BackColor = Color.Transparent;
 
             btnKapat.Font = new Font("Verdana", 12, FontStyle.Bold);
             btnKapat.Cursor = Cursors.Hand;
 
-            // TIKLAMA OLAYI
+             
             btnKapat.Click += (s, e) => { Application.Exit(); };
 
-            // FARE ÜZERİNE GELİNCE (HOVER)
+             
             btnKapat.MouseEnter += (s, e) =>
             {
-                btnKapat.BackColor = Color.Red;       // Arkaplan kıpkırmızı olsun
-                btnKapat.ForeColor = Color.White;     // Yazı beyaz olsun
+                btnKapat.BackColor = Color.Red;       
+                btnKapat.ForeColor = Color.White;      
             };
 
-            // FARE ÜZERİNDEN GİDİNCE (ESKİ HALİ)
+             
             btnKapat.MouseLeave += (s, e) =>
             {
                 btnKapat.BackColor = Color.Transparent;
-                btnKapat.ForeColor = Color.Firebrick; // Normal rengine dönsün
+                btnKapat.ForeColor = Color.Firebrick;  
             };
 
             this.Controls.Add(btnKapat);
@@ -90,7 +90,7 @@ namespace StokSatisTakip
 
         }
 
-        // --- BUTON TIKLAMA OLAYLARI (BUNLAR SİLİNİRSE HATA VERİR) ---
+         
 
         private void btnUrunIslem_Click(object sender, EventArgs e)
         {
@@ -110,14 +110,14 @@ namespace StokSatisTakip
             satis.ShowDialog();
         }
 
-        // Eğer Rapor butonunu tasarım ekranından (Toolbox) eklediysen ve adı 'btnRapor' ise:
+         
         private void btnRapor_Click(object sender, EventArgs e)
         {
             RaporForm rapor = new RaporForm();
             rapor.ShowDialog();
         }
 
-        // Eski çıkış butonu varsa hatayı önlemek için dursun
+         
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();

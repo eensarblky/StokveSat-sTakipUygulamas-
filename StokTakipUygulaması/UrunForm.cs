@@ -108,11 +108,13 @@ namespace StokSatisTakip
                          Button btnKapat = new Button();
             btnKapat.Text = "X";
             btnKapat.Size = new Size(40, 40);
-            btnKapat.Location = new Point(this.Width - 40, 0);              btnKapat.FlatStyle = FlatStyle.Flat;
+            btnKapat.Location = new Point(this.Width - 40, 0);              
+            btnKapat.FlatStyle = FlatStyle.Flat;
             btnKapat.FlatAppearance.BorderSize = 0;
             btnKapat.ForeColor = Color.Gray;
             btnKapat.Font = new Font("Verdana", 12, FontStyle.Bold);
-            btnKapat.Click += (s, e) => { this.Close(); };                                                                          btnKapat.MouseEnter += (s, e) => { btnKapat.BackColor = Color.Red; btnKapat.ForeColor = Color.White; };
+            btnKapat.Click += (s, e) => { this.Close(); };                                                                         
+            btnKapat.MouseEnter += (s, e) => { btnKapat.BackColor = Color.Red; btnKapat.ForeColor = Color.White; };
             btnKapat.MouseLeave += (s, e) => { btnKapat.BackColor = Color.Transparent; btnKapat.ForeColor = Color.Gray; };
             this.Controls.Add(btnKapat);
 

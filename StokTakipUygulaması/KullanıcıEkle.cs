@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using StokSatisTakip.DAL;
-using StokSatisTakip.Domain; // <-- İŞTE EKSİK OLAN VE HATAYI ÇÖZEN SATIR BU!
-
+using StokSatisTakip.Domain;  
 namespace StokSatisTakip
 {
     public partial class KullanıcıEkle : Form

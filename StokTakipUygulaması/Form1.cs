@@ -31,13 +31,12 @@ namespace StokTakipUygulaması
         {
             KullaniciService servis = new KullaniciService();
 
-            // DÜZELTME: Artık 'Kullanici' nesnesi beklemiyoruz, 'bool' (true/false) bekliyoruz.
+             
             bool sonuc = servis.GirisKontrol(txtKullaniciAdi.Text, txtSifre.Text);
 
             if (sonuc == true)
             {
-                // Giriş Başarılı!
-                // Kullanıcı adını 'Oturum' hafızasından çekiyoruz
+                 
                 MessageBox.Show("Hoşgeldiniz: " + StokSatisTakip.Domain.Oturum.AdSoyad);
 
                 AnaMenu menu = new AnaMenu();
