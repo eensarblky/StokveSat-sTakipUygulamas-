@@ -101,10 +101,25 @@ namespace StokSatisTakip.DAL
             using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
             {
                  
-                MySqlDataAdapter adtr = new MySqlDataAdapter("SELECT Id, KullaniciAdi, Rol FROM kullanicilar", baglanti);
+                MySqlDataAdapter adtr = new MySqlDataAdapter("SELECT Id, KullaniciAdi, Sifre, Rol FROM kullanicilar", baglanti);
                 DataTable tablo = new DataTable();
                 adtr.Fill(tablo);
                 return tablo;
+            }
+        }
+
+        public void guncelle(Kullanici k)
+        {
+            using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
+            {
+                baglanti.Open();
+                string sql = "UPDATE kullanicilar SET KullaniciAdi=@kadi, Sifre=@sifre, Rol=@rol WHERE Id=@id";
+                MySqlCommand komut = new MySqlCommand(sql, baglanti);
+                komut.Parameters.AddWithValue("@kadi", k.KullaniciAdi);
+                komut.Parameters.AddWithValue("@sifre", k.Sifre);
+                komut.Parameters.AddWithValue("@rol", k.Rol);
+                komut.Parameters.AddWithValue("@id", k.Id);
+                komut.ExecuteNonQuery();
             }
         }
     }

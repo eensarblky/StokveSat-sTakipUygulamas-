@@ -63,5 +63,27 @@ namespace StokSatisTakip.DAL
             new MySqlCommand("update Urunler set StokAdedi=" + yeniStok + " where Id=" + urunId, baglanti).ExecuteNonQuery();
             baglanti.Close();
         }
+        public void guncelle(Urun u)
+        {
+            using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
+            {
+                baglanti.Open();
+                 
+                string sql = "UPDATE Urunler SET UrunAdi=@ad, barkod=@barkod," +
+                    " Fiyat=@fiyat, StokAdedi=@stok, KritikStok=@kritik, " +
+                    "FiyatAlis=@alis WHERE Id=@id";
+
+                MySqlCommand komut = new MySqlCommand(sql, baglanti);
+                komut.Parameters.AddWithValue("@ad", u.UrunAdi);
+                komut.Parameters.AddWithValue("@barkod", u.Barkod);
+                komut.Parameters.AddWithValue("@fiyat", u.Fiyat);
+                komut.Parameters.AddWithValue("@stok", u.StokAdedi);
+                komut.Parameters.AddWithValue("@kritik", u.KritikStok);
+                komut.Parameters.AddWithValue("@alis", u.FiyatAlis);
+                komut.Parameters.AddWithValue("@id", u.Id);
+
+                komut.ExecuteNonQuery();
+            }
+        }
     }
 }

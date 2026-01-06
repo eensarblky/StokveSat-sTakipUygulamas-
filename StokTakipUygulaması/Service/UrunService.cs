@@ -47,6 +47,21 @@ namespace StokSatisTakip.Service
 
                 (new UrunDAO()).stokGuncelle(urunId, yeniStok);
             }
+
+        }
+        public void guncelle(int id, string ad, string barkod, string fiyat, string stok, string kritik, string alis)
+        {
+            Urun u = new Urun();
+            u.Id = id;
+            u.UrunAdi = ad;
+            u.Barkod = barkod;
+            u.Fiyat = Convert.ToDecimal(fiyat);
+            u.StokAdedi = Convert.ToInt32(stok);
+            u.KritikStok = Convert.ToInt32(kritik);
+            u.FiyatAlis = Convert.ToDecimal(alis);
+
+            UrunDAO dao = new UrunDAO();
+            dao.guncelle(u);
         }
     }
 }

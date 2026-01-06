@@ -125,6 +125,7 @@ namespace StokTakipUygulaması
             // 
             // Form1
             // 
+            AcceptButton = btnGiris;
             AutoScaleDimensions = new SizeF(15F, 35F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveBorder;

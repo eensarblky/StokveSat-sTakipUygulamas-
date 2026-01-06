@@ -44,5 +44,22 @@ namespace StokSatisTakip.DAL
             new MySqlCommand("delete from musteriler where Id=" + id, baglanti).ExecuteNonQuery();
             baglanti.Close();
         }
+        public void guncelle(Musteri m)
+        {
+            using (MySqlConnection baglanti = new MySqlConnection(dbBaglanti))
+            {
+                baglanti.Open();
+                 
+                string sql = "UPDATE musteriler SET adSoyad=@ad, telefon=@tel, tür=@tur WHERE Id=@id";
+
+                MySqlCommand komut = new MySqlCommand(sql, baglanti);
+                komut.Parameters.AddWithValue("@ad", m.AdSoyad);
+                komut.Parameters.AddWithValue("@tel", m.Telefon);
+                komut.Parameters.AddWithValue("@tur", m.Tur);
+                komut.Parameters.AddWithValue("@id", m.Id);
+
+                komut.ExecuteNonQuery();
+            }
+        }
     }
 }

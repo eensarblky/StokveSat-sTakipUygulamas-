@@ -21,5 +21,11 @@ namespace StokSatisTakip.Service
         {
             (new MusteriDAO()).sil(id);
         }
+        public void guncelle(int id, string adSoyad, string telefon, int tur)
+        {
+            Musteri m = new Musteri(adSoyad, telefon, tur);
+            m.Id = id;
+            new MusteriDAO().guncelle(m);
+        }
     }
 }

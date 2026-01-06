@@ -16,10 +16,15 @@
         public string AdSoyad { get; set; }
         public string Telefon { get; set; }
         public int Tur { get; set; }
-
+        
+        public string MusteriTuru => Tur == 0 ? "Perakende" : "Toptan";
+        
         public override string ToString()
         {
             return this.AdSoyad;
         }
+        
+
+       
     }
 }

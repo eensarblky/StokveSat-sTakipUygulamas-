@@ -34,6 +34,7 @@ namespace StokSatisTakip
             dataGridView1 = new DataGridView();
             label6 = new Label();
             txtFiyatAlis = new TextBox();
+            btnGuncelle = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -145,7 +146,7 @@ namespace StokSatisTakip
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridView1.Size = new Size(812, 302);
+            dataGridView1.Size = new Size(867, 338);
             dataGridView1.TabIndex = 12;
             dataGridView1.CellClick += dataGridView1_CellClick;
             // 
@@ -165,11 +166,22 @@ namespace StokSatisTakip
             txtFiyatAlis.Size = new Size(125, 27);
             txtFiyatAlis.TabIndex = 14;
             // 
+            // btnGuncelle
+            // 
+            btnGuncelle.Location = new Point(657, 122);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(94, 29);
+            btnGuncelle.TabIndex = 15;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
+            // 
             // UrunForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1082, 653);
+            ClientSize = new Size(1137, 689);
+            Controls.Add(btnGuncelle);
             Controls.Add(txtFiyatAlis);
             Controls.Add(label6);
             Controls.Add(dataGridView1);
@@ -213,5 +225,6 @@ namespace StokSatisTakip
         private DataGridView dataGridView1;
         private Label label6;
         private TextBox txtFiyatAlis;
+        private Button btnGuncelle;
     }
 }

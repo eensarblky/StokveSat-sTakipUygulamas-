@@ -39,6 +39,8 @@ namespace StokSatisTakip
             label2 = new Label();
             label3 = new Label();
             label4 = new Label();
+            btnGuncelle = new Button();
+            btnSil = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvKullanicilar).BeginInit();
             SuspendLayout();
             // 
@@ -74,13 +76,13 @@ namespace StokSatisTakip
             // 
             // btnKaydet
             // 
-            btnKaydet.Location = new Point(156, 364);
+            btnKaydet.Location = new Point(98, 329);
             btnKaydet.Name = "btnKaydet";
             btnKaydet.Size = new Size(94, 29);
             btnKaydet.TabIndex = 4;
             btnKaydet.Text = "Kaydet";
             btnKaydet.UseVisualStyleBackColor = true;
-            btnKaydet.Click += btnKaydet_Click_1;
+            btnKaydet.Click += btnKaydet_Click;
             // 
             // dgvKullanicilar
             // 
@@ -90,6 +92,7 @@ namespace StokSatisTakip
             dgvKullanicilar.RowHeadersWidth = 51;
             dgvKullanicilar.Size = new Size(509, 290);
             dgvKullanicilar.TabIndex = 5;
+            dgvKullanicilar.CellClick += dgvKullanicilar_CellClick;
             // 
             // label1
             // 
@@ -127,11 +130,33 @@ namespace StokSatisTakip
             label4.TabIndex = 9;
             label4.Text = "Rol";
             // 
+            // btnGuncelle
+            // 
+            btnGuncelle.Location = new Point(148, 364);
+            btnGuncelle.Name = "btnGuncelle";
+            btnGuncelle.Size = new Size(94, 29);
+            btnGuncelle.TabIndex = 10;
+            btnGuncelle.Text = "Güncelle";
+            btnGuncelle.UseVisualStyleBackColor = true;
+            btnGuncelle.Click += btnGuncelle_Click;
+            // 
+            // btnSil
+            // 
+            btnSil.Location = new Point(198, 329);
+            btnSil.Name = "btnSil";
+            btnSil.Size = new Size(94, 29);
+            btnSil.TabIndex = 11;
+            btnSil.Text = "Sil";
+            btnSil.UseVisualStyleBackColor = true;
+            btnSil.Click += btnSil_Click;
+            // 
             // KullanıcıEkle
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(859, 485);
+            Controls.Add(btnSil);
+            Controls.Add(btnGuncelle);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -190,5 +215,7 @@ namespace StokSatisTakip
         private Label label2;
         private Label label3;
         private Label label4;
+        private Button btnGuncelle;
+        private Button btnSil;
     }
 }
