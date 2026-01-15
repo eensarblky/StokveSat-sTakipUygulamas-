@@ -8,7 +8,7 @@
 
 > **Projenin çalışır halini izlemek için yukarıdaki görsele tıklayın.**
 
-Bu proje, küçük ve orta ölçekli işletmelerin... (diğer yazılar devam eder)
+
 
 
 Bu proje, küçük ve orta ölçekli işletmelerin stok durumlarını, müşteri ilişkilerini ve satış işlemlerini yönetmeleri için geliştirilmiş, **C#** ve **Windows Forms (WinForms)** tabanlı bir masaüstü uygulamasıdır. Veri tabanı olarak **MySQL** kullanılmıştır ve proje **Katmanlı Mimari (N-Tier Architecture)** prensiplerine uygun olarak tasarlanmıştır.
