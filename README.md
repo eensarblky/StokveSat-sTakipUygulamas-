@@ -5,7 +5,7 @@
 
 # 📦 Stok ve Satış Takip Otomasyonu
 
-[![Tanıtım Videosu](https://img.youtube.com/vi/VIDEO_ID_BURAYA/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_BURAYA)
+[![Tanıtım Videosu](https://img.youtube.com/vi/oJelV50duo0/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_BURAYA)
 
 > **Projenin çalışır halini izlemek için yukarıdaki görsele tıklayın.**
 
