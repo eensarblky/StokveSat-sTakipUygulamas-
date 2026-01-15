@@ -70,8 +70,11 @@ Projeyi yerel makinenizde çalıştırmak için aşağıdaki adımları izleyin:
 ## 📷 Ekran Görüntüleri
 
 <img width="998" height="597" alt="Ana Menü" src="https://github.com/user-attachments/assets/f1f77faa-b4f1-4dde-b135-4cb8b756a7b6" />
+
 <img width="1137" height="682" alt="Ürün sayfası" src="https://github.com/user-attachments/assets/896606ea-644e-4601-8948-af3cf90adbe8" />
+
 <img width="789" height="437" alt="Müşteri Bilgisi" src="https://github.com/user-attachments/assets/dc8f4aca-1e94-4e0c-b367-30b1598a755e" />
+
 ## 🤝 Katkıda Bulunma
 
 1.  Bu projeyi Fork'layın.
