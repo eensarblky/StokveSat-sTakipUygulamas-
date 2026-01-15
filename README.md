@@ -18,6 +18,7 @@ Uygulama aşağıdaki temel modülleri içerir:
     * Kategori bazlı ürün listeleme.
 * **👥 Müşteri Yönetimi:**
 * <img width="789" height="437" alt="Müşteri Bilgisi" src="https://github.com/user-attachments/assets/dc8f4aca-1e94-4e0c-b367-30b1598a755e" />
+    
     * Müşteri kayıt, düzenleme ve silme işlemleri.
     * Müşteri iletişim bilgileri takibi.
 * **🛒 Satış İşlemleri:**
