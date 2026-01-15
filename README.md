@@ -5,10 +5,13 @@
 
 # 📦 Stok ve Satış Takip Otomasyonu
 
-[![Tanıtım Videosu](https://img.youtube.com/vi/oJelV50duo0&t=9s.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_BURAYA)
+# 📦 Stok ve Satış Takip Otomasyonu
+
+[![Tanıtım Videosu](https://img.youtube.com/vi/oJelV50duo0/0.jpg)](https://www.youtube.com/watch?v=VIDEO_ID_BURAYA)
 
 > **Projenin çalışır halini izlemek için yukarıdaki görsele tıklayın.**
 
+Bu proje, küçük ve orta ölçekli işletmelerin... (diğer yazılar devam eder)
 
 
 Bu proje, küçük ve orta ölçekli işletmelerin stok durumlarını, müşteri ilişkilerini ve satış işlemlerini yönetmeleri için geliştirilmiş, **C#** ve **Windows Forms (WinForms)** tabanlı bir masaüstü uygulamasıdır. Veri tabanı olarak **MySQL** kullanılmıştır ve proje **Katmanlı Mimari (N-Tier Architecture)** prensiplerine uygun olarak tasarlanmıştır.
